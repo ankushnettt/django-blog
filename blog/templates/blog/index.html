@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  My blog
+{% endblock %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+  <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/ankush.jpeg' %}" alt="Ankush - The author of this blog" />
+      <h2>Ankush's Blog</h2>
+    </header>
+    <p>Hi, I am Ankush. I like to blog about tech and the people</p>
+  </section>
+  <section id="latest-posts">
+    <h2>My latest thoughts</h2>
+    <ul>
+      {% for post in posts %}
+        {% include 'blog/includes/post.html' %}
+      {% endfor %}
+    </ul>
+  </section>
+  <section id="about">
+    <h2>What i do</h2>
+    <p>Programming is the process of creating instructions that allow computers to solve problems and perform useful tasks. Developers use programming languages to build websites, applications, software, and tools.</p>
+    <p>A good developer focuses not only on writing code but also on solving problems, debugging errors, learning new technologies, and writing clean, maintainable code. Continuous practice and learning are important for becoming a better developer.</p>
+  </section>
+{% endblock %}
