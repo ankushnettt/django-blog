@@ -77,7 +77,7 @@ django-blog/
    python manage.py runserver
    ```
 
-7. Open your browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+7. Open your browser at [http://127.0.0.1:8000/](https://127.0.0.1:8000/)
 
 ## Usage
 
